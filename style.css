@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --color1: #FCA424;
@@ -32,8 +32,9 @@ img{
 body{
     display: flex;
     justify-content: center;
-    min-height: 100svh;
+    /* min-height: 100svh; */
     padding-block: 5rem;
+    position: relative;
 }
 
 *::after,
@@ -46,6 +47,7 @@ body{
     height: 140svh;
     width:1200px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.365);
+    background: white;
 }
 
 .cover-image{
@@ -434,6 +436,10 @@ nav .navitems:last-child:hover{
     border-right: 2px solid var(--color4);
     width: 100%;
     text-align: center;
+    font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 .claims .statistics .card .des{
     color: var(--color4);
@@ -491,6 +497,12 @@ nav .navitems:last-child:hover{
     padding: 15px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(9, 9, 9, 0.215);
+    transition: all .5s ease-in;
+}
+
+.client-items:hover{
+    cursor: pointer;
+    scale: 1.04;
 }
 
 .client-items:nth-child(2){
@@ -567,13 +579,18 @@ nav .navitems:last-child:hover{
 .activity h4{
     position: relative;
 }
+
+.activity p{
+    color: #a8a8a8;
+}
+
 .activity h4::after{
     height: 10px;
     aspect-ratio: 1/1;
     background: blue;
     border-radius: 50%;
     top: 3px;
-    left: -20px;
+    left: -19px;
     z-index: 3;
 }
 
@@ -608,6 +625,84 @@ nav .navitems:last-child:hover{
     background: var(--color1);
     padding: 5px 10px;
     color: var(--color5);
+    &:hover{
+        background: #d8870e;
+    }
 }
 
 
+
+/* background image */
+.orange-circle{
+    height: 103vh;
+    aspect-ratio: 1 / 1;
+    border: 64px solid var(--color1);
+    position: absolute;
+    border-radius: 50%;
+    top: -26%;
+    z-index: -1;
+    left: -22%;
+}
+
+.orange-square{
+    height: 30px;
+    aspect-ratio: 1/1;
+    border: 7px solid #fca62467;
+    position: absolute;
+    rotate: 45deg;
+    bottom: 10px;
+}
+
+.or-square1{
+    bottom: 10px;
+}
+
+.or-square2{
+    top: 8%;
+    right: 4%;
+    rotate: 63deg;
+    border-width: 10px;
+}
+
+.or-square3{
+    left: 5%;
+    top: 58%;
+    height: 20px;
+}
+
+.green-circle{
+    position: absolute;
+    height: 30px;
+    aspect-ratio: 1/1;
+    border: 5px solid var(--color2);
+    border-radius: 50%;
+    top: 3%;
+    left: 53%;
+}
+
+.green-square{
+    height: 20px;
+    aspect-ratio: 1/1;
+    background-color: var(--color2);
+    position: absolute;
+    left: 5%;
+    bottom: 2%;
+}
+
+.gray-square{
+    height: 40vh;
+    aspect-ratio: 1 / 1;
+    border: 20px solid var(--color4);
+    position: absolute;
+    rotate: 35deg;
+    bottom: -7%;
+    right: -4%;
+    z-index: -1;
+}
+
+.gr-sq2{
+    height: 7vh;
+    top: 50%;
+    right: 1%;
+    border-width: 15px;
+}
