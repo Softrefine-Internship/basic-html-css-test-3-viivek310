@@ -14,6 +14,7 @@
     box-sizing: border-box;
 }
 
+
 html{
     font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
@@ -27,6 +28,11 @@ img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
 }
 
 body{
@@ -35,6 +41,7 @@ body{
     /* min-height: 100svh; */
     padding-block: 5rem;
     position: relative;
+    overflow-x: hidden;
 }
 
 *::after,
@@ -500,10 +507,7 @@ nav .navitems:last-child:hover{
     transition: all .5s ease-in;
 }
 
-.client-items:hover{
-    cursor: pointer;
-    scale: 1.04;
-}
+
 
 .client-items:nth-child(2){
     color: var(--color4);
@@ -567,6 +571,7 @@ nav .navitems:last-child:hover{
 
 .activity{
     position: relative;
+    
 }
 
 .activity::after{
@@ -574,6 +579,7 @@ nav .navitems:last-child:hover{
     width: 1px;
     background: var(--color4);
     top: 15%;
+    left: 10%;
 }
 
 .activity h4{
@@ -594,9 +600,18 @@ nav .navitems:last-child:hover{
     z-index: 3;
 }
 
-.activity-items:nth-child(3) h4::after{
-    background: var(--color1)
+.activity .scroll {
+    height: 50vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    /* sc */
+    scrollbar-color: var(--color1) white;
+    padding-left: 10px;
 }
+
+
+
+
 
 .activity-items:nth-child(4) h4::after{
     background: var(--color2)
