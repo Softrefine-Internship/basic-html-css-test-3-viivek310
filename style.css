@@ -72,10 +72,10 @@ body{
 }
 
 .profile{
-    height: 14rem; 
+    height: 14rem;
     width: 13rem;
     position: absolute;
-    left: 5%;
+    left: 5.5%;
     bottom: -18%;
     border-radius: 5px;
     overflow: hidden;
@@ -115,11 +115,13 @@ header .navigation
     padding: 3px 7px;
     border-radius: 2px;
     color: var(--color4);
+    cursor: pointer;    
 }
 
 .navigation .notification{
     color: var(--color4);
     position: relative;
+    cursor: pointer;
     &::after{
         height: 7px;
         aspect-ratio: 1/1;
@@ -552,7 +554,7 @@ nav .navitems:last-child:hover{
 }
 
 .client-des .label{
-    color: var(--color3);
+    color: #9d9292;
 }
 
 .activity .activity-items{
@@ -600,8 +602,17 @@ nav .navitems:last-child:hover{
     z-index: 3;
 }
 
+.activity-items:nth-child(3n+1) h4::after {
+    background: blue
+}
+.activity-items:nth-child(3n+2) h4::after {
+    background: var(--color1)
+}
+.activity-items:nth-child(3n) h4::after {
+    background: var(--color2)
+}
 .scroll {
-    height: 50vh;
+    height: 48vh;
     overflow-y: scroll;
     
     padding-left: 10px;
@@ -629,9 +640,6 @@ nav .navitems:last-child:hover{
 
 
 
-.activity-items:nth-child(4) h4::after{
-    background: var(--color2)
-}
 .client-items{
     position: relative;
 }
@@ -643,6 +651,8 @@ nav .navitems:last-child:hover{
     display: flex;
     align-items: center;
     background: var(--color1);
+    border-radius: 3px;
+    overflow: hidden;
 }
 
 .client-items .pay-btn button,
@@ -656,6 +666,7 @@ nav .navitems:last-child:hover{
     background: var(--color1);
     padding: 5px 10px;
     color: var(--color5);
+    /* overflow: hidden; */
     &:hover{
         background: #d8870e;
     }
